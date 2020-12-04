@@ -11,4 +11,6 @@ public interface Collision {
                 && y+image.getHeight(null)<=yP+imageP.getHeight(null)) return true;
         else return false;
     }
+
+
 }

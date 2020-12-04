@@ -64,7 +64,7 @@ public class MainFrame {
                 squirrel[i].setY(200);
             }else {
                squirrel[i].setX(platform[i].getX()+platform[i].getImage().getWidth(null)/2);
-               squirrel[i].setY(platform[i].getY());
+               squirrel[i].setY(platform[i].getY() - squirrel[i].getImage().getHeight(null)+15);
 
             }
 
@@ -102,7 +102,7 @@ public class MainFrame {
                     squirrel[i].setY(200);
                 }else {
                     squirrel[i].setX(platform[i].getX()+platform[i].getImage().getWidth(null)/2);
-                    squirrel[i].setY(platform[i].getY());
+                    squirrel[i].setY(platform[i].getY() - squirrel[i].getImage().getHeight(null)+15);
 
                 }
 

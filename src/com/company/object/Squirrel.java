@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Squirrel {
+public class Squirrel implements Collision {
     private int x,y;
     private Image image = new ImageIcon("image/object/squirrel0.png").getImage();
     private Image images[] = new Image[7];
@@ -42,7 +42,12 @@ public class Squirrel {
                 MainFrame.panel.repaint();
             }
         });
+
         timer.start();
+    }
+
+    public void collisionSquirrel(int xP, int yP, Image imageP){
+        if (collision(x, y, image, xP, yP, imageP)) y=-100;
     }
 
     public int getX() {

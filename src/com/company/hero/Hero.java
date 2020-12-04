@@ -192,6 +192,13 @@ public class Hero implements KeyListener {
 
             }
         }
+        collisionObject();
+    }
+
+    private void collisionObject() {
+        for (int i=0; i<MainFrame.squirrel.length; i++){
+            MainFrame.squirrel[i].collisionSquirrel(x, y, image);
+        }
     }
 
     void collision(){
