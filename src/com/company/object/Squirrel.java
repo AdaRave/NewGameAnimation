@@ -47,7 +47,10 @@ public class Squirrel implements Collision {
     }
 
     public void collisionSquirrel(int xP, int yP, Image imageP){
-        if (collision(x, y, image, xP, yP, imageP)) y=-100;
+        if (collision(x, y, image, xP, yP, imageP)){
+            y=-100;
+            MainFrame.score.plus(1);
+        }
     }
 
     public int getX() {

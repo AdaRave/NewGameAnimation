@@ -1,5 +1,6 @@
 package com.company.frame;
 
+import com.company.Score;
 import com.company.hero.Hero;
 import com.company.object.Fon;
 import com.company.object.Platform;
@@ -19,6 +20,10 @@ public class MainFrame {
     public static Platform platform[] = new Platform[5];
 
     public static Squirrel squirrel[] = new Squirrel[5];
+
+    public static Score score = new Score();
+
+    public static JLabel label = new JLabel("0");
 
 
     public MainFrame() {
@@ -49,6 +54,10 @@ public class MainFrame {
         };
 
         panel.setBackground(Color.BLACK);
+
+        panel.setLayout(null);
+        label.setBounds(frame.getWidth()/2, 10, 30, 30);
+        panel.add(label);
 
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.add(panel);
